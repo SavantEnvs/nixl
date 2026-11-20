@@ -1,0 +1,9 @@
+project: savantenvs/nixl
+target: fuzz_dlist
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dlist/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dlist
+    libfuzzer: true
+    timeout: 10
